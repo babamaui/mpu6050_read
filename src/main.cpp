@@ -92,26 +92,33 @@ void loop() {
   mpu.getEvent(&a, &g, &temp);
 
   /* Print out the values */
-  Serial.print("Acceleration X: ");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y: ");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z: ");
-  Serial.print(a.acceleration.z);
-  Serial.println(" m/s^2");
 
-  Serial.print("Rotation X: ");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y: ");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z: ");
-  Serial.print(g.gyro.z);
-  Serial.println(" rad/s");
+  String output = "";
+  output += "Acceleration X: ";
+  output += static_cast<String>(a.acceleration.x);
+  output += " Y: ";
+  output += static_cast<String>(a.acceleration.y);
+  output += " Z: ";
+  output += static_cast<String>(a.acceleration.z);
+  output += " m/s^2";
 
-  // Serial.print("Temperature: ");
-  // Serial.print(temp.temperature);
-  // Serial.println(" degC");
+  output += " // ";
 
+  output += "Rotation X: ";
+  output += static_cast<String>(g.gyro.x);
+  output += " Y: ";
+  output += static_cast<String>(g.gyro.y);
+  output += " Z: ";
+  output += static_cast<String>(g.gyro.z);
+  output += " rad/s";
+
+  Serial.println(output);
+  Serial.println("");
+  Serial.println("");
+  Serial.println("");
+  Serial.println("");
+  Serial.println("");
+  Serial.println("");
   Serial.println("");
   delay(50);
 }
