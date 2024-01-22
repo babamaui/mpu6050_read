@@ -7,8 +7,7 @@
 
 /**
  * Links used:
- *  https://randomnerdtutorials.com/esp32-mpu-6050-accelerometer-gyroscope-arduino/
- *  https://randomnerdtutorials.com/vs-code-platformio-ide-esp32-esp8266-arduino/#2
+
 */
 
 Adafruit_MPU6050 mpu;
